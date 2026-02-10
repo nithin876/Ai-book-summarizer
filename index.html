@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Book Summarizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header>
+      <h1>📘 AI Book Summarizer</h1>
+      <p>Turn long books into clear summaries instantly</p>
+    </header>
+
+    <main>
+      <section class="input-box">
+        <textarea id="bookText" placeholder="Paste book text here..."></textarea>
+
+        <div class="controls">
+          <select id="summaryType">
+            <option value="short">Short Summary</option>
+            <option value="detailed">Detailed Summary</option>
+            <option value="bullets">Bullet Points</option>
+          </select>
+
+          <button onclick="summarizeBook()">Summarize</button>
+        </div>
+
+        <span id="charCount">0 characters</span>
+      </section>
+
+      <section class="output-box">
+        <h2>Summary</h2>
+        <div id="loading" class="hidden">⏳ Generating summary...</div>
+        <div id="output"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Powered by AI • Clean UI • Fast Results</p>
+    </footer>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
